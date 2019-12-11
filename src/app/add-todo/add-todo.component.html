@@ -1,0 +1,9 @@
+<form (ngSubmit)="onSubmit" novalidate>
+    <label for="title">Title:</label>
+    <input type="text" [(ngModel)]="item.title" id="title" name="title">
+
+    <label for="description">description:</label>
+    <input type="text" [(ngModel)]="item.description" id="description" name="description">  
+
+    <button>Submit</button>
+</form>
