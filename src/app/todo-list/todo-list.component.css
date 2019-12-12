@@ -1,5 +1,6 @@
 .box{
-    border-style: solid;
+    border-style: dotted;
+    color: teal;
     list-style-type: none;
     max-width: 500px;
     float: left;

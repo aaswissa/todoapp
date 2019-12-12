@@ -1,9 +1,10 @@
+<h1>Insert Todo</h1>
 <form (ngSubmit)="onSubmit()" novalidate>
-    <label for="title">Title:</label>
+    <label for="title">Title:</label> <br>
     <input type="text" [(ngModel)]="item.title" id="title" name="title">
-
-    <label for="description">description:</label>
+    <br> <br>
+    <label for="description">Description:</label> <br>
     <input type="text" [(ngModel)]="item.description" id="description" name="description">  
-
+    <br><br>
     <button>Submit</button>
 </form>

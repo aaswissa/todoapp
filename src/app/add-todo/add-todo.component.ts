@@ -32,8 +32,6 @@ export class AddTodoComponent implements OnInit {
 
   ngOnInit() {
 
-    this.color = "#" + Math.floor(Math.random() * 0xFFFFFF).toString(16);
-
   }
 
 }
