@@ -1,0 +1,12 @@
+.box{
+    border-style: solid;
+    list-style-type: none;
+    max-width: 500px;
+    float: left;
+    margin: 5px;
+
+}
+
+.head{
+    font-weight: 100;
+}

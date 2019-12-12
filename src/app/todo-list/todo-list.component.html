@@ -1,1 +1,5 @@
-<p>todo-list works!</p>
+<ul *ngFor="let item of todoList; let i = index">
+    <li class="box" [ngStyle]="{'background-color': color}">
+        <span class="head">Tasks #{{i+1}}</span> <br>
+        Title:{{item.title}} <br> Descirption:{{item.description}} <br> isComplete:{{item.isComplete}}</li>
+    </ul>

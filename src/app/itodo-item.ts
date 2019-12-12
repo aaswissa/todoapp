@@ -1,5 +1,5 @@
 export interface ITodoItem {
-    title: string
+    title?: string
     description?: string
     isComplete?: boolean
 }

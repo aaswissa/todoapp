@@ -9,19 +9,30 @@ import { TodoApiService } from '../todo-api.service';
 })
 export class AddTodoComponent implements OnInit {
 
+  title: string;
+  isComplete: boolean;
+  description: string;
   item: ITodoItem = {title: '', description: ''};
+
+  
+  color: string;
+
 
   onSubmit(){
 
-    this.fbApi.addItem(this.item);
+    this.fbApi.addItem({isComplete: false, ...this.item});
     this.item = {title: '', description: ''};
+
 
   }
 
-  constructor(private fbApi:TodoApiService ) { }
+  constructor(private fbApi:TodoApiService ) { 
+
+  }
 
   ngOnInit() {
 
+    this.color = "#" + Math.floor(Math.random() * 0xFFFFFF).toString(16);
 
   }
 

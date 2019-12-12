@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ITodoItem } from '../itodo-item';
+import { TodoApiService } from '../todo-api.service'
 
 @Component({
   selector: 'app-todo-list',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoListComponent implements OnInit {
 
-  constructor() { }
+  todoList: ITodoItem[] = []
+
+  constructor(private fbApi: TodoApiService) { }
 
   ngOnInit() {
+
+    this.fbApi.items.subscribe(items => this.todoList = items);
+
   }
 
 }

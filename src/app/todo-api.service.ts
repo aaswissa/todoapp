@@ -15,7 +15,7 @@ export class TodoApiService {
   items: Observable<ITodoItem[]>;
 
   constructor(private afs: AngularFirestore) {
-    this.itemsCollection= this.afs.collection('todo')
+    this.itemsCollection= this.afs.collection("todo")
     console.log('service: this.itemCollection', this.itemsCollection);
     this.items = this.itemsCollection.snapshotChanges().pipe(
       map(
@@ -30,7 +30,7 @@ export class TodoApiService {
             console.log('service(pipe): action.item.payload.doc.data', data)
             console.log('service(pipe): action.item.payload.doc.id', id)
 
-            return {id, ...data}
+            return {id, ...data} as ITodoItem;
           })
         }
       )
